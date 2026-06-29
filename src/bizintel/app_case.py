@@ -40,10 +40,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 from bizintel.utils_data import (
-    check_quality,
-    inspect_basic,
     load_data,
-    summarize_numeric,
 )
 from bizintel.utils_logger import LOG, log_header
 from bizintel.utils_viz import plot_bar
@@ -289,21 +286,6 @@ def main() -> None:
     df_customers = load_data(CUSTOMERS_FILE, "customers")
     df_products = load_data(PRODUCTS_FILE, "products")
     df_sales = load_data(SALES_FILE, "sales")
-
-    LOG.info("CALL a function to inspect each dataset..........")
-    inspect_basic(df_customers, "customers")
-    inspect_basic(df_products, "products")
-    inspect_basic(df_sales, "sales")
-
-    LOG.info("CALL a function to check data quality of each dataset........")
-    check_quality(df_customers, "customers")
-    check_quality(df_products, "products")
-    check_quality(df_sales, "sales")
-
-    LOG.info("CALL a function to summarize numeric columns in each dataset........")
-    summarize_numeric(df_customers, "customers")
-    summarize_numeric(df_products, "products")
-    summarize_numeric(df_sales, "sales")
 
     LOG.info("CALL a function to get sales by region........")
     df_region = sales_by_region(df_customers, df_sales)
