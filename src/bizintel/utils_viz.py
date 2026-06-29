@@ -46,7 +46,7 @@ def plot_bar(
     """
     LOG.info(f"Creating chart: {title}")
 
-    fig, ax = plt.subplots(figsize=(9, 5))
+    _, ax = plt.subplots(figsize=(9, 5))
 
     bar: Axes = sns.barplot(
         data=df,
@@ -91,7 +91,7 @@ def plot_line(
     """
     LOG.info(f"Creating chart: {title}")
 
-    fig, ax = plt.subplots(figsize=(9, 5))
+    _, ax = plt.subplots(figsize=(9, 5))
 
     line: Axes = sns.lineplot(
         data=df,

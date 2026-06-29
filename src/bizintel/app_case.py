@@ -1,15 +1,12 @@
 """app_case.py - example.
 
-An example of loading and inspecting raw business data.
-This app is used to verify project workflow.
+An example of loading and visualizing raw business data.
 
 Author: Denise Case
 Date: 2026-06
 
 Process:
     - Load raw CSV data files.
-    - Inspect each dataset (shape, columns, types).
-    - Check basic data quality (missing values, duplicates).
     - Visualize sales by region and product category.
     - Log a summary of findings.
 
@@ -24,9 +21,7 @@ uv run python -m bizintel.app_case
 
 OBS:
   Don't edit this file - it should remain a working example.
-  It is used in each module to test the installation and workflow.
-  You never need to do anything with it, but if you would like,
-  you can copy it, rename it, and modify your copy.
+  Copy it, rename it with your alias, and modify your copy.
   If you do, include your command to run it in the docstring above and in README.md.
 """
 
@@ -102,26 +97,29 @@ def sales_by_region(
     # Clean up the Region column by stripping whitespace and capitalizing each word
     df_merged["Region"] = df_merged["Region"].str.strip().str.title()
 
-    # Group the merged DataFrame by Region, sum the SaleAmount for each region,
-    # reset the index to turn the groupby object back into a DataFrame,
-    # and sort the DataFrame by SaleAmount in descending order
-    # so we can easily see which region has the highest sales.
-    df_region: pd.DataFrame = (
-        df_merged.groupby("Region")["SaleAmount"]
-        .sum()
-        .reset_index()
-        .sort_values("SaleAmount", ascending=False)
+    # Group the merged DataFrame by Region and sum the SaleAmount for each region.
+    # This returns a Series (a single column of values, one per region).
+    # We cast to Series because we are grouping a single column.
+    grouped: pd.Series = pd.Series(df_merged.groupby("Region")["SaleAmount"].sum())
+
+    # Reset the index to turn the Series back into a DataFrame with two columns:
+    # Region and SaleAmount.
+    # Then sort by SaleAmount descending so the highest-revenue region appears first.
+    df_region: pd.DataFrame = grouped.reset_index().sort_values(
+        "SaleAmount", ascending=False
     )
 
     # Use the built-in dataframe iloc (index location) method
     # to get the first row of the sorted DataFrame (the region with the highest sales)
     # as a string.
-    # In Python, we start counting with 0 (no offset from the beginning of the list),
+    # In Python, we start counting with 0
+    # (no offset from the beginning of the list),
     # so the first row is at index 0.
     top_region: str = str(df_region.iloc[0]["Region"])
 
     # Use the built-in dataframe iloc (index location) method
-    # to get the first row of the sorted DataFrame (the region with the highest sales)
+    # to get the first row of the sorted DataFrame
+    # (the region with the highest sales)
     # as a float.
     top_sales: float = float(df_region.iloc[0]["SaleAmount"])
 
@@ -176,15 +174,16 @@ def sales_by_category(
         how="left",
     )
 
-    # Group the merged DataFrame by Category, sum the SaleAmount for each category,
-    # reset the index to turn the groupby object back into a DataFrame,
-    # and sort the DataFrame by SaleAmount in descending order
-    # so we can easily see which category has the highest sales.
-    df_category: pd.DataFrame = (
-        df_merged.groupby("Category")["SaleAmount"]
-        .sum()
-        .reset_index()
-        .sort_values("SaleAmount", ascending=False)
+    # Group the merged DataFrame by Category and sum the SaleAmount for each category.
+    # This returns a Series (a single column of values, one per category).
+    # We cast to Series because we are grouping a single column.
+    grouped: pd.Series = pd.Series(df_merged.groupby("Category")["SaleAmount"].sum())
+
+    # Reset the index to turn the Series back into a DataFrame with two columns:
+    # Category and SaleAmount.
+    # Then sort by SaleAmount descending so the highest-revenue category appears first.
+    df_category: pd.DataFrame = grouped.reset_index().sort_values(
+        "SaleAmount", ascending=False
     )
 
     # Use the built-in dataframe iloc (index location) method
@@ -195,7 +194,8 @@ def sales_by_category(
     top_category: str = str(df_category.iloc[0]["Category"])
 
     # Use the built-in dataframe iloc (index location) method
-    # to get the first row of the sorted DataFrame (the category with the highest sales
+    # to get the first row of the sorted DataFrame
+    # (the category with the highest sales)
     # as a float.
     top_sales: float = float(df_category.iloc[0]["SaleAmount"])
 
