@@ -43,7 +43,7 @@ Describe your first exploration of the smart sales data.
 
 ### Basis and Data
 
-Describe the raw data files you added to `data/raw/`.
+Describe the raw data files in `data/raw/`.
 
 Include:
 

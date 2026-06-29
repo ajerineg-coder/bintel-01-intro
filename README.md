@@ -17,8 +17,6 @@ customers, products, and sales records.
 We learn to:
 
 - load raw business data from CSV files
-- inspect data shape, columns, and types
-- identify data quality issues (missing values, duplicates, inconsistencies)
 - visualize sales by region and product category
 - think in terms of KPIs and actionable business insights
 
