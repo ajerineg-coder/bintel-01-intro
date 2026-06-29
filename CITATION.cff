@@ -11,9 +11,9 @@
 cff-version: "1.2.0"
 type: software
 
-title: "ml-01-intro"
+title: "bintel-01-intro"
 version: "0.1.0"
-date-released: "2026-06-16"
+date-released: "2026-06-28"
 
 authors:
   - family-names: Case
@@ -21,22 +21,22 @@ authors:
     orcid: "https://orcid.org/0000-0001-6165-7389"
     affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
 
-repository-code: "https://github.com/denisecase/ml-01-intro"
-url: "https://github.com/denisecase/ml-01-intro"
+repository-code: "https://github.com/denisecase/bintel-01-intro"
+url: "https://github.com/denisecase/bintel-01-intro"
 license: MIT
 
 abstract: >
-  Machine learning project.
-  Learn to characterize machine learning problems,
-  identify supervised and unsupervised tasks,
-  and select a target for prediction.
+  Business intelligence project.
+  Learn to load and inspect raw smart sales data,
+  identify data quality issues,
+  and visualize sales by region and product category.
 
 keywords:
-  - data analytics
-  - notebooks
-  - machine learning
-  - computer-science-education
-  - data-analytics-education
+  - business-intelligence
+  - data-analytics
+  - smart-sales
+  - data-exploration
+  - data-quality
   - professional-python
   - reproducible-workflows
   - ci-cd
@@ -44,9 +44,9 @@ keywords:
   - software-quality
   - professional-practice
   - python
-  - jupyter
   - pandas
-  - scikit-learn
+  - matplotlib
+  - seaborn
   - git
   - github
   - open-source

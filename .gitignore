@@ -19,9 +19,6 @@ logs/
 # === Course instructor files ===
 
 .annotations/annotations.md
-ml_check.ps1
-ml_clean.ps1
-ml_prep.ps1
 shape.ps1
 py_src_chores.ps1
 pyrightconfig.json

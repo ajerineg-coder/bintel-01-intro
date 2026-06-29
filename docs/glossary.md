@@ -3,9 +3,8 @@
 Use this page to record terms and ideas that help you understand
 professional analytics projects.
 
-This project covers characterizing machine learning problems:
-identifying the task type, selecting a target, and understanding
-what kind of model would be appropriate.
+This project introduces business intelligence and smart sales data:
+loading raw data, inspecting it, and thinking in terms of business goals.
 
 Pro-tip: Expand the VS Code **Outline** view (below the navigator on the right)
 to see this file organization at-a-glance.
@@ -30,12 +29,11 @@ A package usually includes an `__init__.py` file.
 The init file allows code in that folder to be
 imported and reused across a project.
 
-### notebook
+### virtual environment
 
-A notebook is an interactive file used to combine
-code, output, notes, and narrative.
-Notebooks are useful for exploration, experiments,
-and explaining analysis step by step.
+A virtual environment is an isolated folder (`.venv/`) that holds
+the specific Python packages a project needs.
+Using one means projects do not interfere with each other.
 
 ## Reuse and Workflow
 
@@ -59,62 +57,72 @@ In a project, a workflow might include running code,
 checking results, making changes, testing again,
 and saving progress with Git.
 
-## Machine Learning Concepts
+### version control
 
-### machine learning
+Version control is a system for tracking changes to files over time.
+Git is the most widely used version control system.
+It allows you to save snapshots of your work and recover earlier versions.
 
-Machine learning is a way of building programs that learn patterns
-from data rather than following hand-written rules.
-The program improves its predictions by seeing examples.
+### repository
 
-### supervised learning
+A repository (repo) is a folder tracked by Git.
+It contains your project files and the full history of changes.
+GitHub hosts repositories online so they can be shared and backed up.
 
-Supervised learning is a type of machine learning where the training data
-includes a target column - a known answer the model learns to predict.
-You choose the target; that choice defines the problem.
+## Data and Outputs
 
-### unsupervised learning
+### raw data
 
-Unsupervised learning is a type of machine learning where there is no target column.
-The model explores structure in the data without being told what to look for.
-Clustering is a common unsupervised approach.
+Raw data is the original input data used by the project.
+It should usually be kept unchanged so the analysis
+can be repeated from the original source.
 
-### target variable
+### CSV file
 
-The target variable is the column a supervised model is trained to predict.
-Choosing the target is an analyst decision that shapes the entire modeling approach.
+A CSV (comma-separated values) file stores tabular data as plain text.
+Each row is a record and each value is separated by a comma.
+CSV files can be opened in Excel, VS Code, or read into Python with pandas.
 
-### features
+### log file
 
-Features are the input columns used to make a prediction.
-The analyst decides which features to include, transform, or remove.
+A log file records what happened when a program ran.
+The `project.log` file in this project captures INFO and DEBUG messages
+so you can review what the program did without re-running it.
 
-### classification
+## Business Intelligence Concepts
 
-Classification is a supervised ML task where the target is a category.
-The model learns to assign inputs to one of a fixed set of classes.
-Predicting whether an email is spam or not spam is a classification problem.
+### business intelligence
 
-### regression
+Business intelligence (BI) is the process of collecting, organizing,
+and analyzing business data to support better decisions.
+BI turns raw data into actionable insights.
 
-Regression is a supervised ML task where the target is a continuous number.
-The model learns to predict a quantity rather than a category.
-Predicting a house price from its features is a regression problem.
+### data-driven decision making
 
-### clustering
+Data-driven decision making (DDDM) means using data and analysis
+to guide business choices rather than relying on intuition alone.
+The goal is to reduce guesswork and increase confidence in decisions.
 
-Clustering is an unsupervised ML task where the model groups similar
-observations together without being given labels.
-The analyst interprets what each group means.
+### KPI
 
-### discrete variable
+A KPI (Key Performance Indicator) is a measurable value that shows
+how well a business is achieving a specific goal.
+Examples include total revenue, customer count, and average sale amount.
 
-A discrete variable takes one of a limited set of distinct values.
-Category columns such as species, color, or rating are discrete.
-A discrete target usually means a classification problem.
+### actionable insight
 
-### continuous variable
+An actionable insight is a finding from data analysis that suggests
+a specific thing the business should do.
+A good BI analysis always ends with a recommendation, not just a chart.
 
-A continuous variable can take any numeric value within a range.
-Columns such as temperature, price, or weight are continuous.
-A continuous target usually means a regression problem.
+### dimension
+
+A dimension is a descriptive attribute used to slice and group data.
+Examples include region, product category, and date.
+Dimensions answer questions like who, what, where, and when.
+
+### metric
+
+A metric is a numeric value that measures business performance.
+Examples include total sales, average order value, and transaction count.
+Metrics answer questions like how much and how many.

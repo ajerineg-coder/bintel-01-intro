@@ -1,49 +1,34 @@
-# ml-01-intro
+# bintel-01-intro
 
 [![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
-> Professional Python project: characterizing machine learning.
+> Professional Python project: introducing business intelligence and smart sales data.
 
 ## Project Description
 
-This project focuses on learning to find good data problems in a dataset,
-and learning when machine learning (ML) might be helpful.
+This project introduces business intelligence (BI) and
+data-driven decision making (DDDM).
 
-We learn to characterize:
+We work with a realistic smart sales dataset containing
+customers, products, and sales records.
 
-- supervised (when we pick a target to predict)
-- unsupervised (no target, just exploring, e.g. clustering)
+We learn to:
 
-In this project, we pick a dataset and a target.
-
-If the target is:
-
-- a discrete category column, we know it is a classification problem
-- a continuous numeric column, we know it is a regression problem.
-
-Some numbers are actually categories, for example a rating of 1, 2, 3.
-May be better characterized as a category / discrete variable.
-
-## Example Notebook + Your Notebook
-
-Keep the example notebook as it is.
-Either copy it or use it to build a new notebook that ends in _yourname.
-See [docs/your-files.md] for more.
-
-Links:
-
-- [ml_01_case.ipynb](notebooks/ml_01_case.ipynb)
+- load raw business data from CSV files
+- inspect data shape, columns, and types
+- identify data quality issues (missing values, duplicates, inconsistencies)
+- visualize sales by region and product category
+- think in terms of KPIs and actionable business insights
 
 ## Working Files
 
 You'll work with these areas:
 
-- **data/raw** - raw data for exploration (only if you add a dataset)
+- **data/raw** - raw smart sales CSV files (customers, products, sales)
 - **docs/** - project narrative and documentation
 - **src/bizintel/** - the app is an example; run only (no need to modify)
-- **notebooks/** - interactive analysis
 - **pyproject.toml** - update authorship & links
 - **zensical.toml** - update authorship & links
 
@@ -72,8 +57,8 @@ Working through issues is part of implementing professional projects.
 
 ## Success
 
-After completing Phase 1. **Start & Run**, you'll have your own GitHub project,
-with the example notebook executed and committed,
+After completing Phase 1. **Start & Run**,
+you'll have your own GitHub project,
 and running the example module will print out:
 
 ```shell
@@ -96,9 +81,9 @@ open a machine terminal in your `Repos` folder:
 
 ```shell
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/ml-01-intro
+git clone https://github.com/username/bintel-01-intro
 
-cd ml-01-intro
+cd bintel-01-intro
 code .
 ```
 
@@ -123,7 +108,7 @@ uvx pre-commit run --all-files
 # repeat if changes were made
 uvx pre-commit run --all-files
 
-# run the example module to verify the environment (.venv/)
+# run the example module
 uv run python -m bizintel.app_case
 
 # run common chores: format, lint, run checks and tests...
@@ -156,51 +141,47 @@ You accidentally started Python interactive mode.
 It happens.
 Press `Ctrl+c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
 
-## Example Output (Can Remove this Section after You Verify)
+## Example Output (Remove this Section after You Verify)
 
 ```shell
-| INFO | ML | Summarize workflow........
-| INFO | ML | ========================
-| INFO | ML | SUMMARY
-| INFO | ML | ========================
-| INFO | ML | Dataset: hours_scores_case
-| INFO | ML | Original rows: 10
-| INFO | ML | Clean rows: 10
-| INFO | ML | Features: ['hours_studied', 'practice_quizzes', 'attendance_pct', 'sleep_hours', 'prior_score']
-| INFO | ML | Target: score
-| INFO | ML | ----- in a script, call plt.show() once at the end to display all charts -----
-| INFO | ML | ----- in a script, CLOSE the chart windows with the close button to CONTINUE -----
-| INFO | ML | Workflow complete
-| INFO | ML | IMPORTANT: This script creates chart windows.
-| INFO | ML | Close chart windows and terminate this process with CTRL+c as needed.
-| INFO | ML | ========================
-| INFO | ML | Executed successfully!
-| INFO | ML | ========================
+| INFO | BI | ========================
+| INFO | BI | SUMMARY
+| INFO | BI | ========================
+| INFO | BI | Customers:  201 rows, 4 columns
+| INFO | BI | Products:   100 rows, 4 columns
+| INFO | BI | Sales:      2001 rows, 7 columns
+| INFO | BI | ========================
+| INFO | BI | ANALYST NOTES:
+| INFO | BI | Note any data quality issues.
+| INFO | BI | We will clean data later.
+| INFO | BI | ========================
+| INFO | BI | CALL a function to show charts........
+| INFO | BI | Workflow complete
+| INFO | BI | CLOSE chart windows to continue.
+| INFO | BI | Terminate this process with CTRL+c as needed.
+| INFO | BI | ========================
+| INFO | BI | Executed successfully!
+| INFO | BI | ========================
 ```
 
 ## Findings and Visuals
 
 Take screenshots of your charts and provide them here with a discussion.
-In Markdown, display a figure by using:
+In Markdown, display a figure using:
 an exclamation mark immediately followed by square brackets containing a useful caption
 immediately followed by parentheses containing the relative path to your figure.
-Note: When you start typing the path with a dot (.) for "here, in this directory",
-the IDE may help complete the path.
 
-In your custom project, follow this example, but
+In your custom project:
 
-- your figures and narrative should reflect your work,
-- this `README.md` should include your commands, process, and visuals, and
-- `docs/index.md` should include your narrative.
+- your figures and narrative should reflect your work
+- this `README.md` should include your commands, process, and visuals
+- `docs/index.md` should include your narrative
 
-Remove unnecessary instructional comments in your custom files.
+Replace these placeholders with screenshots from your own project run:
 
-These are from the example app used to test the .venv/.
-If possible, replace these to present interesting results from your custom project:
+![Total Sales by Region](./docs/images/Figure_1.png)
 
-![Provide a Useful Caption](./docs/images/Figure_1.png)
-
-![Provide a Useful Caption](./docs/images/Figure_2.png)
+![Total Sales by Product Category](./docs/images/Figure_2.png)
 
 ## Project Documentation
 

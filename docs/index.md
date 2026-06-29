@@ -39,40 +39,39 @@ Was it easy, or surprisingly challenging and why do you think so?
 
 ## Phase 5. Custom Project (OPTIONAL in Module 1)
 
-Describe your custom project.
-
-In Module 1, this includes choosing a dataset, identifying a target,
-and explaining what kind of ML problem it represents.
+Describe your first exploration of the smart sales data.
 
 ### Basis and Data
 
-Describe the dataset, input, or example you started with.
+Describe the raw data files you added to `data/raw/`.
 
 Include:
 
-- The original example dataset or input
-- The data source
-- Why you chose it, kept it, or changed it
+- The three data files and what each contains
+- The data source and how it was generated
+- Any data quality issues you noticed
 - Any important limitations or assumptions
 
-### Modeling Approach
+### Business Questions
 
-Describe the problem type and approach for this project.
+Describe what you observed and what questions the data raises.
 
 Include:
 
-- Is this supervised or unsupervised and how do you know
+- What the most common customer region appears to be
+- What the highest and lowest product prices appear to be
+- What data quality issues you noticed
+- What business questions you would want to answer with this data
 
 ### Summary
 
-Summarize your custom project.
+Summarize your first look at the smart sales data.
 
 Include:
 
-- How you implemented your custom work
-- What results you got
-- What you learned
-- How well you exercised the skills covered in this project
-- What kinds of real problems you could apply these skills to in the future
+- How you explored the data (VS Code, Excel, Python, or other)
+- What surprised you
+- What you learned about the data preparation work ahead
+- What kinds of real business problems this data could help answer
 
-Display at least one image or screenshot showing your work.
+Display at least one screenshot showing your work.
