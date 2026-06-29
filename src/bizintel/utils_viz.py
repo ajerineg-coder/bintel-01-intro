@@ -3,6 +3,10 @@
 WHY: Consistent charts across all modules.
 Same palette, same style, same axis conventions.
 Generate professional-quality output from day one.
+
+These functions are a starting point.
+Change colors, sizes, and labels to match the data and audience.
+Customize charts for the story they tell.
 """
 
 # === IMPORTS ===
