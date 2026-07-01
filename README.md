@@ -1,10 +1,10 @@
-# bintel-01-intro
+# Addie Gemmell - BI Intro Project
 
 [![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
-> Professional Python project: introducing business intelligence and smart sales data.
+> Professional Python projectexploring business intelligence concepts using Python and smart sales data.
 
 ## Project Description
 
@@ -79,7 +79,7 @@ open a machine terminal in your `Repos` folder:
 
 ```shell
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/bintel-01-intro
+git clone https://github.com/ajerineg-coder/bintel-01-intro
 
 cd bintel-01-intro
 code .
