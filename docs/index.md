@@ -23,55 +23,41 @@ to get the example projects running on your machine.
 
 ## Phase 4. Technical Modification
 
-Describe your small technical modification to the example project.
+For my technical modification, I updated the bar charts to display the total sales value above each bar. I added value labels using Matplotlib's `bar_label()` function inside `utils_viz.py`.
 
-Include:
+I chose this change because it makes the charts easier to read. Instead of estimating values from the y-axis, the exact sales totals are displayed directly on the chart.
 
-- What you changed
-- Why you chose that change
-- How you verified that it worked
-- What result, output, chart, metric, or behavior confirmed the change
+I verified the change by running the project in VS Code and confirming that both charts displayed the new dollar value labels. The project completed successfully and produced the updated visualizations without any errors.
 
-Compared with the example project,
-explain what is different and why the change matters.
+Compared to the original example project, the charts now provide more detailed information while keeping the overall design the same. This small change improves readability and makes it easier to compare sales totals across regions and product categories.
 
-Was it easy, or surprisingly challenging and why do you think so?
+Overall, I would rate this modification as moderate. The code change itself was small, but learning where to add the new code, testing it, and committing the changes to GitHub took some trial and error.
 
 ## Phase 5. Custom Project (OPTIONAL in Module 1)
 
-Describe your first exploration of the smart sales data.
-
 ### Basis and Data
 
-Describe the raw data files in `data/raw/`.
+The project uses three CSV files located in the `data/raw` folder.
 
-Include:
+- `customers_data.csv` contains customer information, including customer IDs and regions.
+- `products_data.csv` contains product information, including product categories and prices.
+- `sales_data.csv` contains individual sales transactions that connect customers and products.
 
-- The three data files and what each contains
-- The data source and how it was generated
-- Any data quality issues you noticed
-- Any important limitations or assumptions
+The data was provided as part of the example project for learning business intelligence concepts. I did not notice any missing data during this initial review, although additional data cleaning would likely be performed in a real business environment.
 
 ### Business Questions
 
-Describe what you observed and what questions the data raises.
+From the charts, the East region generated the highest total sales. Office products also had the highest sales among the product categories.
 
-Include:
+Some questions this data could help answer include:
 
-- What the most common customer region appears to be
-- What the highest and lowest product prices appear to be
-- What data quality issues you noticed
-- What business questions you would want to answer with this data
+- Which regions consistently generate the highest revenue?
+- Which product categories should receive additional marketing?
+- Are there seasonal sales trends?
+- Which customers generate the most repeat business?
 
 ### Summary
 
-Summarize your first look at the smart sales data.
+I explored the data using Python and VS Code by running the example application and reviewing the generated charts. I also made a small enhancement by displaying the exact sales values above each bar.
 
-Include:
-
-- How you explored the data (VS Code, Excel, Python, or other)
-- What surprised you
-- What you learned about the data preparation work ahead
-- What kinds of real business problems this data could help answer
-
-Display at least one screenshot showing your work.
+This project showed how business intelligence combines programming, data analysis, and visualization to help organizations better understand sales performance and support decision-making.
