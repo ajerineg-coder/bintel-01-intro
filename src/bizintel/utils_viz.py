@@ -28,7 +28,7 @@ def plot_bar(
     title: str,
     xlabel: str,
     ylabel: str,
-    palette: str = "Blues_d",
+    palette: str = "crest",
 ) -> None:
     """Plot a vertical bar chart.
 
@@ -50,7 +50,7 @@ def plot_bar(
     """
     LOG.info(f"Creating chart: {title}")
 
-    _, ax = plt.subplots(figsize=(9, 5))
+    _, ax = plt.subplots(figsize=(11, 6))
 
     bar: Axes = sns.barplot(
         data=df,
@@ -65,6 +65,9 @@ def plot_bar(
     bar.set_title(f"{title} (CLOSE chart to continue)")
     bar.set_xlabel(xlabel)
     bar.set_ylabel(ylabel)
+
+    for container in bar.containers:
+        bar.bar_label(container, fmt="$%.0f")
 
     plt.tight_layout()
 
